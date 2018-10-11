@@ -6,7 +6,20 @@
 </head>
 <body>
 <script>
-
+    function fill(num) {
+        let str = '';
+        for (let i = 0; i<num;i++){
+            str+=num;
+        }
+        return str;
+    }
+    
+    let arr = [];
+    let Number = prompt('Введите максимальное число эллементов массива');
+    for (let i = 1; i<=Number;i++){
+        arr[i]=fill(i);
+        document.write('№'+i+' = '+arr[i]+'<br>');
+    }
 </script>
 </body>
 </html>
