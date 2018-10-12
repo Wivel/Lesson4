@@ -6,21 +6,16 @@
 </head>
 <body>
 <script>
-    function revArr(arr){
-        let array = [];
-        let buf,support;
-        support = arr.length;
-        let sup = support/2;
-        for (let i=0;i<sup;i++){
-            buf = arr[support-i];
-            arr[support-i]=arr[i];
-            arr[i]=buf;
+    let arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            for (let z = 0; z < arr[i][j].length; z++) {
+                sum = sum + arr[i][j][z];
+            }
         }
-        return arr;
     }
-
-   var array2 = [1, 2, 3, 4];
-    alert(revArr(array2));
+    alert(sum);
 </script>
 </body>
 </html>
