@@ -6,17 +6,21 @@
 </head>
 <body>
 <script>
-    function arrayFill(str, num) {
+    function revArr(arr){
         let array = [];
-        for (let i = 0; i < num; i++) {
-            array[i] = str;
+        let buf,support;
+        support = arr.length;
+        let sup = support/2;
+        for (let i=0;i<sup;i++){
+            buf = arr[support-i];
+            arr[support-i]=arr[i];
+            arr[i]=buf;
         }
-        return array;
+        return arr;
     }
 
-    let Number = prompt('ЧИсло элементов = ');
-    let str = prompt('Строка  - ');
-    alert(arrayFill(str,Number));
+   var array2 = [1, 2, 3, 4];
+    alert(revArr(array2));
 </script>
 </body>
 </html>
